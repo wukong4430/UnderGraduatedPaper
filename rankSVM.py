@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # @Author: kicc
 # @Date:   2018-03-31 18:08:47
-# @Last Modified by:   kicc
-# @Last Modified time: 2018-04-04 21:54:04
+# @Last Modified by:   Kicc Shen
+# @Last Modified time: 2018-04-05 19:48:16
 
 
 from itertools import combinations, permutations
@@ -14,7 +14,7 @@ import pandas as pd
 class RankSVM(svm.LinearSVC):
 
     def __init__(self, C=1.0):
-        super.__init__(C=C)
+        super().__init__(C=C)
 
     # X,y为原始缺陷训练集中软件模块的特征和缺陷个数
     # 输出为模块对

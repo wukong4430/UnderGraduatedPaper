@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # @Author: kicc
 # @Date:   2018-03-31 18:08:47
-# @Last Modified by:   kicc
-# @Last Modified time: 2018-04-03 19:19:10
+# @Last Modified by:   Kicc Shen
+# @Last Modified time: 2018-04-23 10:14:46
 
 import numpy as np
 import pandas as pd
@@ -11,8 +11,8 @@ import os
 
 
 class Processing():
-    def __init__(self):
-        self.folder_name = "test"
+    def __init__(self, folder_name='test'):
+        self.folder_name = folder_name
 
     def import_data(self):
         '''
@@ -104,15 +104,35 @@ class Processing():
 
         training_data = np.array(training_data)
 
-        training_data_X = training_data[:, 0:k - 2]
+        training_data_X = training_data[:, 0:k - 1]
 
         training_data_y = training_data[:, k - 1]
 
-        testing_data_X = testing_data[:, 0:k - 2]
+        testing_data_X = testing_data[:, 0:k - 1]
 
         testing_data_y = testing_data[:, k - 1]
 
         return training_data_X, training_data_y, testing_data_X, testing_data_y
+
+    def transfrom_data(self, original_data):
+        '''不区分训练集和测试集，每个数据集单独作为测试集/训练集
+
+        return: 全部数据集
+
+        '''
+
+        original_data = original_data.iloc[:, 3:]
+
+        original_data = np.array(original_data)
+
+        k = original_data.shape[1]
+        # k = len(original_data[0])
+
+        original_data_X = original_data[:, 0:k - 1]
+
+        original_data_y = original_data[:, k - 1]
+
+        return original_data_X, original_data_y
 
     def cross_validation(self, original_data):
         """10-fold cross-validation.

@@ -2,7 +2,7 @@
 # @Author: Kicc Shen
 # @Date:   2018-03-28 14:24:06
 # @Last Modified by:   Kicc Shen
-# @Last Modified time: 2018-04-01 21:12:20
+# @Last Modified time: 2018-04-23 14:57:55
 
 import numpy as np
 from itertools import combinations
@@ -53,8 +53,11 @@ def select(X_src, X_tar):
 
 if __name__ == '__main__':
 
-    b = np.array([[10, 2], [7, 12], [2, 9]])
-    a = np.array([[1, 2], [3, 5], [5, 8]])
-    c_b = np.zeros([3, 2])
+    # b = np.array([[10, 2], [7, 12], [2, 9]])
+    # a = np.array([[1, 2], [3, 5], [5, 8]])
+    # c_b = np.zeros([3, 2])
 
-    select(a, b)
+    # select(a, b)
+
+    for i in np.arange(0.0, 4.0, 0.1):
+        print(i)

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # @Author: kicc
 # @Date:   2018-03-31 18:08:47
-# @Last Modified by:   kicc
-# @Last Modified time: 2018-04-03 19:19:14
+# @Last Modified by:   Kicc Shen
+# @Last Modified time: 2018-04-05 19:53:58
 
 import numpy as np
 
@@ -15,7 +15,7 @@ class PerformanceMeasure():
         self.aee_value = []
         self.fpa_value = 0
 
-    def AEE(self):
+    def AAE(self):
         '''
         求每一类模块上的平均绝对误差（average absolute error）
         real_list指测试集中每个模块的真实缺陷个数
