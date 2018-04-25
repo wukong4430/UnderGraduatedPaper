@@ -65,7 +65,7 @@ def main(classifier):
 
     ##########################################################
     # NN FILTER
-    nn = NN_filter(training_data_X, training_data_X,
+    nn = NN_filter(training_data_X, training_data_y,
                    testing_data_X, testing_data_y)
 
     training_nn_X, training_nn_y, testing_nn_X, testing_nn_y = nn.transform()
