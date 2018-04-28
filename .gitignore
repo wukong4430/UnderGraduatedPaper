@@ -1,0 +1,13 @@
+ant/
+camel/
+jedit/
+ivy/
+data/
+log4j/
+lucene/
+poi/
+synapse/
+test/
+xalan/
+xerces/
+velocity/
