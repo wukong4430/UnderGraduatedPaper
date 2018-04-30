@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 # @Author: kicc
 # @Date:   2018-03-31 18:08:47
-# @Last Modified by:   Kicc Shen
-# @Last Modified time: 2018-04-05 19:48:16
+# @Last Modified by:   KICC
+# @Last Modified time: 2018-04-28 14:58:41
 
 
 from itertools import combinations, permutations
 import numpy as np
-from sklearn import svm, linear_model, cross_validation
+from sklearn import svm, linear_model, model_selection
 import pandas as pd
 
 
