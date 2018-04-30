@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # @Author: Kicc Shen
 # @Date:   2018-03-28 14:24:06
-# @Last Modified by:   Kicc Shen
-# @Last Modified time: 2018-04-23 14:57:55
+# @Last Modified by:   KICC
+# @Last Modified time: 2018-04-30 09:24:54
 
 import numpy as np
 from itertools import combinations
@@ -59,5 +59,18 @@ if __name__ == '__main__':
 
     # select(a, b)
 
-    for i in np.arange(0.0, 4.0, 0.1):
-        print(i)
+    nothing = np.arange(0, 120, 1)
+    count = 0
+    sums = 0
+    res = []
+    for i in nothing:
+        sums += i
+        if count % 5 == 4:
+            res.append(sums)
+            sums = 0
+        count += 1
+    res = [i / 5 for i in res]
+    print(res)
+
+    index = 2
+    print('index={0}'.format(index))
